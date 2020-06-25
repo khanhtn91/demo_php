@@ -6,7 +6,10 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'indexAction';
 include './controller/'.$controller.'Controller.php';
 switch ($controller) {
     case 'index':
-        $controllerObject = new indexController($config);
+        $controllerObject = new indexController();
+        break;
+    case 'contact':
+        $controllerObject = new contactController();
         break;
     
     default:

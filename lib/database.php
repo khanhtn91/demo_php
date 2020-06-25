@@ -1,5 +1,4 @@
 <?php 
-
     class database{
         private $hostname;
         private $username;
@@ -9,12 +8,12 @@
         protected $connection;
         protected $result;
 
-        function __construct($config)
+        function __construct()
         {
-            $this->hostname = $config['hostname'];
-            $this->username = $config['user'];
-            $this->password = $config['pass'];
-            $this->database = $config['database'];
+            $this->hostname = 'mysql_php2003';
+            $this->username = 'root';
+            $this->password = 'root';
+            $this->database = 'damme';
             $this->connect();
         }
 
