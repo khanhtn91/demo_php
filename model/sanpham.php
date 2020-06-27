@@ -41,4 +41,9 @@ class sanpham {
         $this->db->execute('select * from sanpham '.$where);
         return $this->db->getAllData();
     }
+
+    public function getDetail($id) {
+        $this->db->execute('select * from sanpham where id = '. $id);
+        return $this->db->getData();
+    }
 }

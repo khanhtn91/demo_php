@@ -11,11 +11,15 @@ switch ($controller) {
     case 'contact':
         $controllerObject = new contactController();
         break;
+    case 'product':
+        $controllerObject = new productController();
+        break;
     
     default:
-        # code...
+        $controllerObject = new indexController();
         break;
 }
 
 $data = $controllerObject->{ $action }();
+
 $view = $data['view'];
