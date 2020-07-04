@@ -1,1 +1,1 @@
-<div class="mr-top"><img src="./images/slide.jpg"></div>
+<div class="mr-top"><img src="public/assets/images/slide.jpg"></div>

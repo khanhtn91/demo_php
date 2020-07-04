@@ -46,4 +46,17 @@ class sanpham {
         $this->db->execute('select * from sanpham where id = '. $id);
         return $this->db->getData();
     }
+
+    public function getproductByCategory($idDanhmuc1, $idDanhmuc2 = 0) {
+
+        $where = ' where';
+        if ($idDanhmuc1 > 0) {
+            $where .= ' id_danhmuc1 = '. $idDanhmuc1;
+        }
+        if ($idDanhmuc2 > 0) {
+            $where .= ' and id_danhmuc2 = '. $idDanhmuc2;
+        }
+        $this->db->execute('select * from sanpham '. $where);
+        return $this->db->getAllData();
+    }
 }

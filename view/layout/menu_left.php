@@ -1,5 +1,5 @@
 <?php 
-include './model/danhmuc.php';
+include_once './model/danhmuc.php';
 $danhmuc = new danhmuc();
 $danhmuc1 = $danhmuc->getDanhmuc1();
 $dm = $danhmuc->getDanhmuc();
@@ -17,14 +17,14 @@ foreach ($dm as $key => $value) {
         <p>Danh Mục Sản Phẩm</p>
     </div> 
     <div class="ml-bottom">
-        <ul>
-            <?php foreach ($array as $danhmuc1) { ?>
+        <ul> 
+            <?php foreach ($array as $id1 => $danhmuc1) { ?>
             <li>
-                <a><?=$danhmuc1['tendm1']?></a>
+                <a href="index.php?controller=product&action=categoryAction&id_danhmuc1=<?=$id1?>"><?=$danhmuc1['tendm1']?></a>
                 <?php if (count($danhmuc1['danhmuc2']) > 0) { ?>
                 <ul>
-                    <?php foreach ($danhmuc1['danhmuc2'] as $danhmuc2) { ?>
-                    <li><a><?=$danhmuc2['tendm2']?></a></li>
+                    <?php foreach ($danhmuc1['danhmuc2'] as $id2 => $danhmuc2) { ?>
+                    <li><a href="index.php?controller=product&action=categoryAction&id_danhmuc1=<?=$id1?>&id_danhmuc2=<?=$id2?>"><?=$danhmuc2['tendm2']?></a></li>
                     <?php }?>
                 </ul>
                 <?php }?>

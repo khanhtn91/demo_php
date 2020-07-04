@@ -1,4 +1,9 @@
-<p class="mb-td">Sản phẩm Mới nhất</p>
+<p class="mb-td">
+    <?=$data['category']['tendm1']?>
+    <?php if ($data['category']['tendm2'] && $_GET['id_danhmuc2']) {
+        echo '/' . $data['category']['tendm2'];
+    }?>
+</p>
 <div class="product">
     <?php 
     foreach ($data['data'] as $key => $value) { ?>
@@ -14,8 +19,4 @@
         
     </div>
     <?php } ?>
-    <?php for($i = 1; $i <= $data['totalPage']; $i++) { ?>
-    <a href="index.php?page=<?=$i?>&sl=2">Page <?=$i?></a>
-    <?php } ?>
-    
 </div>

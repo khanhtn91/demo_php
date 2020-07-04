@@ -1,8 +1,8 @@
 <nav>
     <ul class="menu">
         <li><a href="">Trang chủ</a></li>
-        <li><a>Giới thiệu</a></li>
-        <li><a>Dịch vụ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="https://youtube.com" target="_blank">Dịch vụ</a></li>
         <li>
             <a>Sản phẩm</a>
             <ul>

@@ -3,7 +3,8 @@
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'index';
 $action = isset($_GET['action']) ? $_GET['action'] : 'indexAction';
 
-include './controller/'.$controller.'Controller.php';
+include_once './controller/'.$controller.'Controller.php';
+
 switch ($controller) {
     case 'index':
         $controllerObject = new indexController();
@@ -13,6 +14,9 @@ switch ($controller) {
         break;
     case 'product':
         $controllerObject = new productController();
+        break;
+    case 'about':
+        $controllerObject = new aboutController();
         break;
     
     default:
